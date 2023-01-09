@@ -1,0 +1,51 @@
+ <!doctype HTML>
+ <html>
+ <head>
+	 <title>Form Events</title>
+	 <script type="text/javascript">
+		 
+		 function blur()
+		 {
+			 alert ("cursor moved out of the input box");
+		 }
+		 function focus()
+		 {
+			 alert ("cursor moved into the input box");
+		 }
+		 function select()
+		 {
+			 alert ("user has selected the text");
+		 }
+		 function change()
+		 {
+			 alert ("user has modified the text");
+		 }
+		 function input()
+		 {
+			 alert ("user has entered the text");
+		 }
+		 function invalid()
+		 {
+			 alert ("user has not entered the text");
+		 }
+		 function submit()
+		 {
+			 alert ("user has submitted the form");
+		 } 
+		 function reset()
+		 {
+			 alert ("user has cleared the form");
+		 }
+
+		 </script>
+ </head>
+ <body>
+	 <form method="post" action="thanks.php" onsubmit="submit()" onreset="reset()">
+Enter the Name<input type="text"  onblur="blur()" oninput="input()" onselect="select()" oninvalid="invalid()" /><br>
+Enter the place<input type="text" onchange="change()" onfocus="focus()" required/>	 
+<input type="submit" value="Submit"/>
+<input type="reset" value="Clear"/>
+
+	 </form>
+ </body>
+ </html>
